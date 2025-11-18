@@ -1,0 +1,293 @@
+<!--
+  File: index.html
+  Clean White Professional Portfolio (single-file HTML/CSS/JS)
+  - Replace placeholders (NAME, BIO, LINKS, PROJECTS) with your real content
+  - Save this file as `index.html` and put it in the root of your GitHub Pages repo
+    If your repo is `hareesh.github.io`, the site will be live at https://hareesh.github.io
+
+  Quick deployment (git):
+    git init
+    git add index.html
+    git commit -m "Initial portfolio"
+    git branch -M main
+    git remote add origin https://github.com/<your-username>/hareesh.github.io.git
+    git push -u origin main
+
+  Author: Generated for Hareesh (clean white theme)
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hareesh — QA Automation Engineer</title>
+  <meta name="description" content="Hareesh | QA Automation Engineer — Python, Selenium, Pytest, Robot Framework, CI/CD" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+  <!-- Google Fonts (system fallback safe) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --card: #fbfbfd;
+      --muted: #6b7280;
+      --accent: #0b67ff; /* blue accent */
+      --accent-2: #0b4dcc;
+      --border: #e6e8ee;
+      --radius: 12px;
+      color-scheme: light;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0f1724}
+    a{color:var(--accent);text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{font-weight:600;color:#0f1724;opacity:.86}
+
+    main{margin-top:24px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:28px}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,transparent 0%, rgba(11,103,255,0.03) 100%);padding:28px;border-radius:var(--radius);border:1px solid var(--border)}
+    .name{font-size:28px;font-weight:700;margin:0}
+    .title{color:var(--muted);margin:6px 0 14px}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid var(--border);color:var(--muted)}
+
+    .about p{margin:0;color:#172129;line-height:1.6}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .skill{background:var(--card);border:1px solid var(--border);padding:8px 10px;border-radius:8px;font-weight:600;color:#233047}
+
+    /* Right column */
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--border)}
+    .profile-pic{width:96px;height:96px;border-radius:12px;background:#f3f5f9;display:block;object-fit:cover}
+    .meta{margin-top:12px}
+    .meta p{margin:4px 0;color:var(--muted)}
+
+    /* Projects */
+    .projects{margin-top:18px;display:grid;gap:14px}
+    .project{padding:14px;border-radius:10px;border:1px solid var(--border);background:linear-gradient(180deg,#fff,#fbfdff)}
+    .project h4{margin:0 0 6px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:13px;padding:6px 8px;border-radius:999px;border:1px solid var(--border);background:#fff}
+
+    /* Experience timeline */
+    .timeline{margin-top:18px}
+    .item{display:flex;gap:12px;padding:12px 0;border-top:1px dashed var(--border)}
+    .item:first-child{border-top:0}
+    .when{min-width:100px;color:var(--muted);font-weight:600}
+    .what{flex:1}
+    .what h5{margin:0}
+    .what p{margin:6px 0 0;color:var(--muted)}
+
+    /* Contact */
+    .contact-form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid var(--border);font-family:inherit}
+    textarea{min-height:110px}
+
+    footer{margin-top:32px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:920px){.grid{grid-template-columns:1fr}} 
+    @media (max-width:520px){.logo{width:48px;height:48px}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">H</div>
+        <div>
+          <div style="font-weight:700">Hareesh</div>
+          <div style="color:var(--muted);font-size:13px">QA Automation Engineer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#resume">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="grid">
+        <section>
+          <div class="hero">
+            <h1 class="name">Hareesh — QA Automation Engineer</h1>
+            <div class="title">5+ years in Automation | Python • Selenium • Pytest • Robot Framework • CI/CD</div>
+
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+              <div style="flex:1">
+                <div class="about">
+                  <p>I'm a results-driven QA Automation Engineer with experience building scalable automation frameworks and testing web & API systems. I focus on writing maintainable test suites, integrating tests with CI/CD pipelines, and improving test reliability.</p>
+                  <div class="skills" id="skills">
+                    <div class="skill">Python</div>
+                    <div class="skill">Selenium WebDriver</div>
+                    <div class="skill">Pytest</div>
+                    <div class="skill">Robot Framework</div>
+                    <div class="skill">API Testing</div>
+                    <div class="skill">Jenkins / GitHub Actions</div>
+                    <div class="skill">Postman / Requests</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="min-width:160px;display:flex;flex-direction:column;gap:10px">
+                <a class="btn" href="#projects">View Projects</a>
+                <a class="btn secondary" href="mailto:youremail@example.com?subject=Portfolio%20Enquiry">Contact Me</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="projects" id="projects">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3 style="margin:10px 0 6px">Selected Projects</h3>
+              <small style="color:var(--muted)">Showcasing automation, frameworks & APIs</small>
+            </div>
+
+            <article class="project">
+              <h4>BK Automation — Bluekaktus</h4>
+              <div style="color:var(--muted);font-size:13px">Automation Lead • Aug 2024 — May 2025</div>
+              <p style="margin-top:8px">Built an end-to-end Selenium + Pytest automation suite for web apps, integrated tests into GitHub Actions for continuous validation, and implemented API checks with requests & Postman. Improved regression test runtime by ~40% via parallelization and flaky-test mitigation.</p>
+              <div class="tags">
+                <div class="tag">Python</div>
+                <div class="tag">Selenium</div>
+                <div class="tag">Pytest</div>
+                <div class="tag">GitHub Actions</div>
+              </div>
+            </article>
+
+            <article class="project">
+              <h4>Extreme_Automation — VVDN</h4>
+              <div style="color:var(--muted);font-size:13px">QA Automation Engineer • Sep 2023 — Mar 2024</div>
+              <p style="margin-top:8px">Designed keyword-driven test suites with Robot Framework, created reusable test libraries, and automated API validations. Collaborated cross-functionally to enable test-driven releases and Reporting using HTML & Allure reports.</p>
+              <div class="tags">
+                <div class="tag">Robot Framework</div>
+                <div class="tag">API Automation</div>
+                <div class="tag">Allure</div>
+              </div>
+            </article>
+
+            <!-- Add more projects here -->
+          </div>
+
+          <!-- Experience -->
+          <div class="timeline">
+            <h3 style="margin:16px 0 8px">Experience</h3>
+            <div class="item">
+              <div class="when">Aug 2024 — May 2025</div>
+              <div class="what">
+                <h5>Bluekaktus — BK Automation</h5>
+                <p>Automation Lead. Led framework design, test reliability improvements and CI/CD integration.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="when">Sep 2023 — Mar 2024</div>
+              <div class="what">
+                <h5>VVDN — Extreme_Automation</h5>
+                <p>Worked on Robot Framework-driven suites and API automation.</p>
+              </div>
+            </div>
+
+            <!-- Add more timeline items as needed -->
+          </div>
+
+        </section>
+
+        <!-- Right column -->
+        <aside>
+          <div class="card">
+            <img class="profile-pic" src="https://via.placeholder.com/300x300.png?text=Your+Photo" alt="Profile photo">
+            <div class="meta">
+              <div style="font-weight:700">Hareesh</div>
+              <p class="muted">QA Automation Engineer • India</p>
+              <p style="margin-top:8px;color:var(--muted);font-size:14px">Open to opportunities | Remote friendly</p>
+
+              <div style="margin-top:12px">
+                <div style="font-weight:700;font-size:13px">Contact</div>
+                <p style="margin:6px 0 0">📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+                <p style="margin:6px 0 0">🔗 <a href="https://github.com/hareesh">github.com/hareesh</a></p>
+                <p style="margin:6px 0 0">📄 <a href="#resume">Download Resume</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="card">
+            <h4 style="margin:0 0 8px">Quick Skills</h4>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div><strong>Languages:</strong> Python, SQL</div>
+              <div><strong>Frameworks:</strong> Selenium, Pytest, Robot</div>
+              <div><strong>Tools:</strong> Jenkins, GitHub Actions, Postman</div>
+              <div><strong>Reporting:</strong> Allure, HTML reports</div>
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="card" id="contact">
+            <h4 style="margin:0 0 8px">Contact Me</h4>
+            <form class="contact-form" onsubmit="handleContact(event)">
+              <input type="text" id="name" placeholder="Your name" required>
+              <input type="email" id="email" placeholder="Your email" required>
+              <textarea id="message" placeholder="Short message"></textarea>
+              <button class="btn" type="submit">Send</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+
+      <div id="resume" style="margin-top:20px">
+        <h3>Resume</h3>
+        <p>Download a PDF version of the resume or link to your LinkedIn / Naukri profile here.</p>
+        <p><a href="#">[Upload your resume.pdf and replace this link]</a></p>
+      </div>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Hareesh — QA Automation Engineer • Built with HTML + CSS • <a href="https://github.com/hareesh/hareesh.github.io">Source</a>
+    </footer>
+  </div>
+
+  <script>
+    // Small script: handle contact (mailto fallback) and year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(message + '\n\n' + 'Contact: ' + email);
+      window.location.href = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
+    }
+
+    // Small enhancement: smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          const el = document.querySelector(href);
+          if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); e.preventDefault(); }
+        }
+      })
+    })
+  </script>
+</body>
+</html>
